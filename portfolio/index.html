@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahd Elsherbeny | Data Engineer & AI Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#111827',
+                        accentBlue: '#3b82f6',
+                        accentPurple: '#8b5cf6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 20px -2px rgba(139, 92, 246, 0.25);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 selection:bg-accentBlue selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/85 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight bg-gradient-to-r from-accentBlue to-accentPurple bg-clip-text text-transparent">
+                Shahd Elsherbeny
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-accentBlue transition-colors">About</a>
+                <a href="#projects" class="hover:text-accentBlue transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-accentBlue transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-accentBlue transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white hover:opacity-95 transition-opacity shadow-lg shadow-blue-500/20">
+                    <i class="fa-solid fa-paper-plane mr-2 text-xs"></i> Let's Connect
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-accentBlue py-1">About</a>
+            <a href="#projects" class="block text-gray-300 hover:text-accentBlue py-1">Projects</a>
+            <a href="#skills" class="block text-gray-300 hover:text-accentBlue py-1">Skills</a>
+            <a href="#contact" class="block text-gray-300 hover:text-accentBlue py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-16 flex items-center justify-center relative overflow-hidden">
+        <!-- Background decorative blur circles -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center z-10">
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-gray-900 border border-gray-800 text-xs font-medium text-accentBlue mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Open for Data Engineering & AI Opportunities</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-accentBlue via-indigo-400 to-accentPurple bg-clip-text text-transparent">Shahd Elsherbeny</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl font-medium text-gray-300 mb-6">
+                AI Student & Data Analyst 
+            </p>
+            
+            <p class="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed mb-10">
+                Transforming raw, complex data into high-performance analytical architectures, data warehouses, and intelligent pipelines to drive robust business decisions.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-medium hover:opacity-90 transition shadow-lg shadow-blue-500/25 flex items-center justify-center space-x-2">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 hover:text-white font-medium transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-envelope text-xs"></i>
+                    <span>Contact Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900/40 border-y border-gray-800/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">About Me</h2>
+                <div class="w-16 h-1 bg-accentBlue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-gray-800 glow-effect bg-cardBg flex items-center justify-center">
+                        <!-- Placeholder avatar representation -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-accentBlue/20 to-accentPurple/20"></div>
+                        <i class="fa-solid fa-database text-6xl text-accentBlue z-10"></i>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-200">
+                        Bridging the Gap Between Bioinformatics, AI, and Big Data
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                        I am an AI student with a deep passion for Data Engineering, Data Warehousing, and robust data modeling. My academic background at the Faculty of Computers and Artificial Intelligence (FCI) has equipped me with strong analytical foundations, reinforced by specialized professional tracks:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-cardBg border border-gray-800 flex items-start space-x-3">
+                            <div class="p-2 rounded-lg bg-accentBlue/10 text-accentBlue mt-1">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-200 text-sm">FCI - Bioinformatics & AI</h4>
+                                <p class="text-xs text-gray-400 mt-1">Core studies in AI models, structures, and algorithmic logic.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-cardBg border border-gray-800 flex items-start space-x-3">
+                            <div class="p-2 rounded-lg bg-accentPurple/10 text-accentPurple mt-1">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-200 text-sm">DEPI Junior Data Analyst</h4>
+                                <p class="text-xs text-gray-400 mt-1">Hands-on training in advanced data analysis and business insights.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-cardBg border border-gray-800 flex items-start space-x-3 sm:col-span-2">
+                            <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 mt-1">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-200 text-sm">NTI Big Data Professional Training</h4>
+                                <p class="text-xs text-gray-400 mt-1">Specialized training in Big Data ecosystems, data warehousing, and ETL optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight mb-3">Featured Projects</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm">
+                Explore my architectural data models, data warehouse pipelines, and large-scale analytics projects.
+            </p>
+            <div class="w-16 h-1 bg-accentPurple mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1: Data Warehouse -->
+            <div class="bg-cardBg border border-gray-800 rounded-2xl p-6 glow-card transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-accentBlue/10 text-accentBlue">
+                            <i class="fa-solid fa-database text-xl"></i>
+                        </div>
+                        <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-800 text-blue-400 border border-blue-500/20">Data Engineering</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">End-to-End Data Warehouse Architecture</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Designed and built a centralized data warehouse pipeline incorporating staging areas, robust ETL scripts, and cleaned layers to streamline multi-source data ingestion and reporting performance.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">SQL</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">ETL Pipelines</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Data Staging</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/80">
+                        <span class="text-xs text-gray-500">Architecture & Modeling</span>
+                        <a href="https://github.com/4Shahd/Datawarehouse-Dashboard" target="_blank" class="text-xs font-medium text-accentBlue hover:underline flex items-center space-x-1">
+                            <span>View Dashboard</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Star Schema -->
+            <div class="bg-cardBg border border-gray-800 rounded-2xl p-6 glow-card transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-accentPurple/10 text-accentPurple">
+                            <i class="fa-solid fa-star text-xl"></i>
+                        </div>
+                        <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-800 text-purple-400 border border-purple-500/20">Dimensional Modeling</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Star Schema Dimensional Modeling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Created optimized dimensional models utilizing Star Schema architecture. Centralized fact tables surrounded by fully indexed dimension tables to dramatically reduce query execution time.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Fact & Dimension Tables</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Query Optimization</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">SQL</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/80">
+                        <span class="text-xs text-gray-500">Database Design</span>
+                        <a href="https://app.powerbi.com/groups/me/reports/b2472905-8e3b-49d6-a54a-76248a0675cf/7c2b24a8008265612d23?experience=power-bi" target="_blank" class="text-xs font-medium text-accentBlue hover:underline flex items-center space-x-1">
+                            <span>View Dashboard</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Snowflake Schema -->
+            <div class="bg-cardBg border border-gray-800 rounded-2xl p-6 glow-card transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+                            <i class="fa-solid fa-snowflake text-xl"></i>
+                        </div>
+                        <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-800 text-emerald-400 border border-emerald-500/20">Relational Modeling</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Snowflake Schema Modeling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Implemented normalized dimension hierarchies with Snowflake Schema architecture to handle complex relational dependencies efficiently and optimize storage overhead.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Normalized Dimensions</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Relational Design</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Data Integrity</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/80">
+                        <span class="text-xs text-gray-500">Advanced Modeling</span>
+                        <a href="https://app.powerbi.com/groups/me/reports/313218ba-9fe0-4582-aecc-b2ef7ade7a8b/c9351efae3c10a04d983?experience=power-bi" target="_blank" class="text-xs font-medium text-accentBlue hover:underline flex items-center space-x-1">
+                            <span>View Dashboard</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: NYC Taxi Big Data Analytics -->
+            <div class="bg-cardBg border border-gray-800 rounded-2xl p-6 glow-card transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400">
+                            <i class="fa-solid fa-taxi text-xl"></i>
+                        </div>
+                        <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-800 text-amber-400 border border-amber-500/20">Big Data & BI</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">NYC Taxi Big Data Analytics & Dashboard</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Processed massive datasets from the NYC Taxi trip records. Developed batch analysis scripts and built an interactive Streamlit application to visualize spatial and temporal travel trends.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Python</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Streamlit</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-gray-900 text-gray-300">Big Data Analytics</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/80">
+                        <span class="text-xs text-gray-500">Analytics App</span>
+                        <a href="https://github.com/4Shahd" target="_blank" class="text-xs font-medium text-accentBlue hover:underline flex items-center space-x-1">
+                            <span>View Dashboard</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900/40 border-y border-gray-800/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Technical Skills</h2>
+                <p class="text-gray-400 text-sm">Core technologies and frameworks I use to build robust data solutions.</p>
+                <div class="w-16 h-1 bg-accentBlue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill Category 1 -->
+                <div class="bg-cardBg border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-2.5 rounded-lg bg-blue-500/10 text-accentBlue">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-200">Big Data</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Apache Spark</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Hadoop Ecosystem</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">ETL Pipelines</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Data Staging</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="bg-cardBg border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-2.5 rounded-lg bg-purple-500/10 text-accentPurple">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-200">Python / PyTorch</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Python </span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">PyTorch</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Pandas & NumPy</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-cardBg border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-200">SQL & Modeling</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Advanced SQL</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Star Schema</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Snowflake Schema</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Data Warehousing</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="bg-cardBg border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-200">BI & Dashboards</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Power BI</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Streamlit</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Data Visualization</span>
+                        <span class="text-xs px-3 py-1.5 rounded-lg bg-gray-900 text-gray-300 border border-gray-800">Dashboarding</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 max-w-4xl mx-auto px-6 text-center">
+        <div class="bg-cardBg border border-gray-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden glow-effect">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <h2 class="text-3xl font-bold tracking-tight mb-4">Let's Build Something Great Together</h2>
+            <p class="text-gray-400 max-w-lg mx-auto text-sm sm:text-base mb-8">
+                I'm currently looking for new opportunities in Data Engineering and AI. Feel free to reach out via email or connect on social platforms!
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
+                <a href="mailto:shahd@example.com" class="px-6 py-3 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-medium hover:opacity-90 transition shadow-md flex items-center space-x-2 text-sm">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>shahdelsherbeny7@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="flex items-center justify-center space-x-6 text-xl">
+                <a href="https://github.com/4Shahd" target="_blank" class="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:border-accentBlue transition">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:border-accentBlue transition">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800/80 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Shahd Elsherbeny. Designed with a sleek tech aesthetic for Data Analyst & AI Enthusiasts.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
